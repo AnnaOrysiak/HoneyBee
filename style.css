@@ -1,0 +1,526 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  transition: .2s;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}
+
+a:active,
+a:focus {
+  background-color: transparent;
+}
+
+.header {
+  height: 100vh;
+  background-image: url("img/bee_mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% top;
+  box-shadow: 0 0 10px 10px black;
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5vh;
+}
+
+.header__brand {
+  width: 80vw;
+  line-height: 50px;
+  padding-bottom: 2vh;
+  text-align: center;
+  font-weight: bold;
+}
+
+.header__brand a {
+  background-color: transparent;
+  color: black;
+}
+
+.header__img {
+  max-width: 40px;
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-around;
+  width: 70vw;
+  list-style: none;
+  line-height: 50px;
+}
+
+.header__item {
+  transition: .3s;
+}
+
+.header__item:hover {
+  background-color: black;
+}
+
+.header__item a {
+  padding: 0 3px;
+}
+
+.header__item a:active,
+.header__item a:focus {
+  background-color: black;
+  color: white;
+}
+
+.header__nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 50px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 0 0 5px 2px black;
+  z-index: 1;
+}
+
+.header__nav.fixed .header__brand {
+  width: 40px;
+  font-size: 0px;
+  padding-bottom: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.header__nav.fixed img {
+  width: 30px;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 30vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  padding: 5vh 5vw;
+  text-align: center;
+  text-shadow: 0 0 4px orange;
+}
+
+.header__maintext {
+  font-weight: bold;
+  padding: 5vh;
+}
+
+.header__subtext {
+  font-size: 16px;
+}
+
+.section-goals {
+  min-height: 100vh;
+  padding: 15vh 10vw;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-goals-title {
+  display: block;
+  align-self: flex-end;
+  flex-basis: 100%;
+  padding: 5vh 0;
+  text-align: center;
+  order: 0;
+}
+
+.section-goals-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  border-bottom: 2px solid orange;
+}
+
+.section-article {
+  display: block;
+  flex-basis: 40%;
+  height: 25vh;
+  padding: 5vh 0;
+  text-align: center;
+  background-color: white;
+  box-shadow: 2px 2px 5px #000;
+  transition: .3s;
+}
+
+.section-article:hover {
+  transform: scale(1.1);
+}
+
+.section-article i {
+  font-size: 50px;
+  padding: 1vh;
+  color: darkorange;
+}
+
+.section-get-started {
+  min-height: 100vh;
+  padding: 15vh 10vw;
+  background-color: orange;
+  background-image: url("img/light_honeycomb.png");
+  background-blend-mode: multiply;
+  transform: skewY(-3.6deg);
+}
+
+.section-get-started-title {
+  transform: skewY(3.6deg);
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.section-get-started-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  border-bottom: 2px solid black;
+}
+
+.section-get-started-article {
+  position: relative;
+  transform: skewY(3.6deg);
+  padding: 5vh 0;
+  line-height: 200%;
+  text-align: center;
+}
+
+.section-get-started-article h2 {
+  display: block;
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+  z-index: -1;
+  font-size: 150px;
+  font-weight: bold;
+  color: rgba(250, 165, 0, .9);
+}
+
+.section-get-started-button {
+  transform: skewY(3.6deg);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.section-get-started-button:hover {
+  outline: none;
+  border-color: white;
+  background-color: white;
+  color: black;
+}
+
+.section-learn-more {
+  min-height: 50vh;
+  padding: 15vh 10vw;
+  text-align: center;
+}
+
+.section-learn-more-article {
+  padding-bottom: 10vh;
+}
+
+.section-learn-more-title {
+  padding: 5vh 0;
+}
+
+.section-learn-more-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  border-bottom: 2px solid orange;
+}
+
+.section-learn-more-button {
+  position: relative;
+  margin: 20px 0;
+  padding: 15px 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: "Quicksand", Arial;
+  color: black;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.section-learn-more-button:active,
+.section-learn-more-button:focus {
+  outline: none;
+}
+
+.section-learn-more-button::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50px;
+  left: -2px;
+  width: 120px;
+  height: 50px;
+  background-color: orange;
+  transition: .5s;
+  z-index: -1
+}
+
+.section-learn-more-button:hover::after,
+.section-learn-more-button:active::after,
+.section-learn-more-button:focus::after {
+  top: 0;
+}
+
+.section-learn-more-input {
+  margin: 10px 0;
+  padding: 15px 20px;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.section-learn-more-input:active,
+.section-learn-more-input:focus {
+  background-color: rgba(250, 165, 0, .2);
+  outline: none;
+}
+
+.section-learn-more span {
+  font-size: 12px;
+}
+
+.newsletter {
+  border-top: 2px solid black;
+}
+
+.footer {
+  position: relative;
+  padding: 0 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
+  background-color: orange;
+  line-height: 50px;
+  text-align: center;
+}
+
+.footer__copy {
+  order: 1;
+  z-index: 1;
+}
+
+.footer__nav {
+  flex-basis: 100%;
+  list-style: none;
+  order: 0;
+  z-index: 1;
+}
+
+.footer__social {
+  display: inline;
+  font-size: 40px;
+}
+
+.footer__social a:hover {
+  color: white;
+  background-color: transparent;
+}
+
+.footer__scroll {
+  position: absolute;
+  top: -40px;
+  left: 50vw;
+  transform: translateX(-50%) rotate(45deg);
+  width: 80px;
+  line-height: 80px;
+  background-color: orange;
+  border: none;
+  text-align: center;
+  z-index: 1;
+}
+
+.footer__scroll:hover,
+.footer__scroll:active,
+.footer__scroll:focus {
+  outline: none;
+  cursor: pointer;
+}
+
+.footer__scroll i {
+  padding-right: 5px;
+  transform: rotate(-45deg) translateY(-50%);
+  font-size: 20px;
+  transition: .3s;
+}
+
+.footer__scroll:hover i {
+  animation: scrollup 1s linear infinite;
+}
+
+@keyframes scrollup {
+  0% {
+    transform: rotate(-45deg) translateY(-50%)
+  }
+
+  30% {
+    transform: rotate(-45deg) translateY(-100%)
+  }
+
+  70% {
+    transform: rotate(-45deg) translateY(-100%)
+  }
+}
+
+@media (orientation:landscape) {
+  .header {
+    background-image: url("img/bee_landscape.jpg");
+  }
+
+  .section-goals {
+    min-height: 120vh;
+    padding: 15vh 20vw;
+  }
+
+  .section-article {
+    flex-basis: 40%;
+    height: 25vh;
+    padding: 5vh 0;
+    font-size: 12px;
+  }
+
+  .section-article i {
+    font-size: 30px;
+  }
+}
+
+@media (min-width:568px) {
+  .header__list {
+    letter-spacing: 1px;
+  }
+
+  footer {
+    flex-wrap: nowrap
+  }
+
+  .footer__copy {
+    order: 0;
+  }
+
+  .footer__nav {
+    flex-basis: 30%;
+    order: 1;
+  }
+}
+
+@media (min-width:1024px) {
+  .header {
+    background-image: url("img/bee_desktop.jpg");
+  }
+
+  .header__nav {
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 5vh;
+    transition: .5s;
+  }
+
+  .header__brand {
+    padding-bottom: 0;
+    flex-basis: 20%;
+  }
+
+  .header__list {
+    flex-basis: 50%;
+  }
+
+  .header__item a {
+    padding: 0 20px;
+  }
+
+  .header__nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 5px 2px black;
+    z-index: 1;
+  }
+
+  .header__nav.fixed img {
+    width: 30px;
+  }
+
+  .header__nav.fixed .header__brand {
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  .header__subtext {
+    font-size: 24px;
+  }
+
+  .section-goals {
+    min-height: 100vh;
+    padding: 15vh 20vw;
+  }
+
+  .section-article {
+    flex-basis: 40%;
+    height: 25vh;
+    padding: 5vh 0;
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  .section-article i {
+    font-size: 50px;
+  }
+
+  .section-get-started-button {
+    margin-left: 10vw;
+  }
+
+}
+
+@media (min-height:1024px) and (orientation:portrait) {
+  .header {
+    background-image: url("img/bee_portrait.jpg");
+    background-size: cover;
+    background-position: center bottom;
+  }
+}
